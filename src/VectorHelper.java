@@ -26,6 +26,12 @@ public class VectorHelper {
         return new int[] {min, max};
     }
 
+    /**
+     *
+     * @param vecteur
+     *                  le vecteur d'entiers en entrée
+     * @return Un autre vecteur trié.
+     */
     public Vector<Integer> trierVect(Vector<Integer> vecteur){
         Vector<Integer> vecteur2 = (Vector) vecteur.clone();
         vecteur2.sort(Comparator.naturalOrder());
