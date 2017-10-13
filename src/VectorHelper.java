@@ -5,14 +5,14 @@ import java.util.Vector;
 
 /**
  * <p>
- *     Cette classe repésente un ensemle des fonctions
- *     de manipulation des vecteurs pour générer les informations suivantes :
+ *     Cette classe repesente un ensemle des fonctions
+ *     de manipulation des vecteurs pour generer les informations suivantes :
  *     <ul>
- *         <il> Trie des éléments d'un vecteur.</il>
- *         <il> Min et Max d'un vecteur donné. </il>
- *         <il> La somme de deux vecteurs donnés dans le cas ou les tailles sont identiques.</il>
- *         <il> L'inverse des éléments d'un vecteur donné.</il>
- *         <il> Application d'une formule sur les éléments d'un vecteur donné. </il>
+ *         <il> Trie des elements d'un vecteur.</il>
+ *         <il> Min et Max d'un vecteur donne. </il>
+ *         <il> La somme de deux vecteurs donnes dans le cas ou les tailles sont identiques.</il>
+ *         <il> L'inverse des elements d'un vecteur donne.</il>
+ *         <il> Application d'une formule sur les elements d'un vecteur donne. </il>
  *     </ul>
  * </p>
  */
@@ -21,14 +21,14 @@ public class VectorHelper {
     /**
      *
      * @param vect1
-     *              représente le premier vecteur de taille ( m ) d'entiers
+     *              represente le premier vecteur de taille ( m ) d'entiers
      *
      * @param vect2
-     *              représente le deuxième vecteur de taille ( n ) d'entiers
+     *              represente le deuxieme vecteur de taille ( n ) d'entiers
      *
      * Retourne un vecteur de la somme
      * @return vecteur de taille (m) dont les elements sont la somme des deux vecteurs
-     * @throws DifferentSizeException Si les deux vecteurs ont des tailles différentes
+     * @throws DifferentSizeException Si les deux vecteurs ont des tailles differentes
      */
     static Vector<Integer> SumTwoVectors (Vector<Integer> vect1, Vector<Integer> vect2 ) throws DifferentSizeException {
         Vector<Integer> vectSum = new Vector(1,1);
@@ -46,7 +46,7 @@ public class VectorHelper {
     }
 
     /**
-     * Inverse les élements d'un vecteur
+     * Inverse les elements d'un vecteur
      *
      * @param vect
      *              le vecteur d'entiers
@@ -68,7 +68,7 @@ public class VectorHelper {
     }
 
     /**
-     * Remplace chaque element du vecteur par son carré
+     * Remplace chaque element du vecteur par son carre
      * @param vect
      *              vecteur d'entiers
      */

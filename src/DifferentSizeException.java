@@ -3,7 +3,7 @@
  */
 
 /**
- * Classe de l'exception générer si les tailles de deux vecteurs donnés sont différentes
+ * Classe de l'exception generer si les tailles de deux vecteurs donnés sont differentes
  */
 public class DifferentSizeException extends Exception {
 }
