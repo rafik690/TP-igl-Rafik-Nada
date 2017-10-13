@@ -1,6 +1,13 @@
+import java.util.Comparator;
 import java.util.Vector;
 
 public class VectorHelper {
+    /**
+     *
+     * @param vecteur
+     *                  le vecteur d'entiers en entrée
+     * @return un tableau contenant deux entiers : min puis max.
+     */
     public int[] minMax(Vector<Integer> vecteur){
         int min=0;
         int max=0;
@@ -17,5 +24,11 @@ public class VectorHelper {
             }
         }
         return new int[] {min, max};
+    }
+
+    public Vector<Integer> trierVect(Vector<Integer> vecteur){
+        Vector<Integer> vecteur2 = (Vector) vecteur.clone();
+        vecteur2.sort(Comparator.naturalOrder());
+        return vecteur2;
     }
 }
