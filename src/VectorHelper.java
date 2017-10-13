@@ -2,8 +2,34 @@ import java.util.Vector;
 /**
  * Created by NADA on 13/10/2017.
  */
+
+/**
+ * <p>
+ *     Cette classe repésente un ensemle des fonctions
+ *     de manipulation des vecteurs pour générer les informations suivantes :
+ *     <ul>
+ *         <il> Trie des éléments d'un vecteur.</il>
+ *         <il> Min et Max d'un vecteur donné. </il>
+ *         <il> La somme de deux vecteurs donnés dans le cas ou les tailles sont identiques.</il>
+ *         <il> L'inverse des éléments d'un vecteur donné.</il>
+ *         <il> Application d'une formule sur les éléments d'un vecteur donné. </il>
+ *     </ul>
+ * </p>
+ */
 public class VectorHelper {
 
+    /**
+     *
+     * @param vect1
+     *              représente le premier vecteur de taille ( m ) d'entiers
+     *
+     * @param vect2
+     *              représente le deuxième vecteur de taille ( n ) d'entiers
+     *
+     * Retourne un vecteur de la somme
+     * @return vecteur de taille (m) dont les elements sont la somme des deux vecteurs
+     * @throws DifferentSizeException Si les deux vecteurs ont des tailles différentes
+     */
     static Vector<Integer> SumTwoVectors (Vector<Integer> vect1, Vector<Integer> vect2 ) throws DifferentSizeException {
         Vector<Integer> vectSum = new Vector(1,1);
         if (vect1.capacity() == vect2.capacity()) {
@@ -18,4 +44,41 @@ public class VectorHelper {
 
         return vectSum;
     }
+
+    /**
+     * Inverse les élements d'un vecteur
+     *
+     * @param vect
+     *              le vecteur d'entiers
+     */
+
+    static void ReverseVector( Vector<Integer> vect)
+    {
+        int tmp = 0;
+        int i=0; int j = vect.capacity() - 1 ;
+
+        while( i<(vect.capacity()/2) &&  j>=0)
+        {
+            tmp = vect.get(i);
+            vect.setElementAt(vect.get(j),i);
+            vect.setElementAt(tmp,j);
+
+            i++; j--;
+        }
+    }
+
+    /**
+     * Remplace chaque element du vecteur par son carré
+     * @param vect
+     *              vecteur d'entiers
+     */
+    static void SquareVector( Vector<Integer> vect)
+    {
+        for ( int i=0; i< vect.capacity(); i++)
+        {
+            vect.setElementAt(vect.get(i)*vect.get(i), i);
+
+        }
+    }
+
 }
