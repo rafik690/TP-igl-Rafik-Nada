@@ -8,11 +8,11 @@ import java.util.Vector;
  *     Cette classe repesente un ensemle des fonctions
  *     de manipulation des vecteurs pour generer les informations suivantes :
  *     <ul>
- *         <il> Trie des elements d'un vecteur.</il>
- *         <il> Min et Max d'un vecteur donne. </il>
- *         <il> La somme de deux vecteurs donnes dans le cas ou les tailles sont identiques.</il>
- *         <il> L'inverse des elements d'un vecteur donne.</il>
- *         <il> Application d'une formule sur les elements d'un vecteur donne. </il>
+ *         <li> Trie des elements d'un vecteur.</li>
+ *         <li> Min et Max d'un vecteur donne. </li>
+ *         <li> La somme de deux vecteurs donnes dans le cas ou les tailles sont identiques.</li>
+ *         <li> L'inverse des elements d'un vecteur donne.</li>
+ *         <li> Application d'une formule sur les elements d'un vecteur donne. </li>
  *     </ul>
  * </p>
  */
