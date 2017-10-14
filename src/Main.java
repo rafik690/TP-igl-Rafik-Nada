@@ -1,5 +1,7 @@
 import java.util.Vector;
 
+import static org.junit.Assert.assertEquals;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -17,5 +19,10 @@ public class Main {
         for (int i=0;i<v.capacity();i++){
             System.out.print("  "+v.get(i)+"  ");
         }
+        VectorHelper vectorHelper = new VectorHelper();
+        Vector v1= new Vector();
+        v1.add(2);v1.add(3);
+        int [] minmax=vectorHelper.minMax(v1);
+        System.out.println(minmax[0]);
     }
 }

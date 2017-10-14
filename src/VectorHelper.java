@@ -92,10 +92,11 @@ public class VectorHelper {
     public int[] minMax(Vector<Integer> vecteur){
         int min=0;
         int max=0;
-        if (vecteur.capacity()!=0) {
+        System.out.println(vecteur.size());
+        if (vecteur.size()!=0) {
             min = vecteur.get(0);
             max = vecteur.get(0);
-            for (int i =0;i<vecteur.capacity(); i++){
+            for (int i =0;i<vecteur.size(); i++){
                 if (min > vecteur.get(i)){
                     min=vecteur.get(i);
                 }
