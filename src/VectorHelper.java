@@ -18,7 +18,6 @@ import java.util.Vector;
  * </p>
  */
 public class VectorHelper {
-
     /**
      *
      * @param vect1
@@ -31,11 +30,11 @@ public class VectorHelper {
      * @return vecteur de taille (m) dont les elements sont la somme des deux vecteurs
      * @throws DifferentSizeException Si les deux vecteurs ont des tailles differentes
      */
-    static Vector<Integer> SumTwoVectors (Vector<Integer> vect1, Vector<Integer> vect2 ) throws DifferentSizeException {
+    static Vector<Integer> sumTwoVectors (Vector<Integer> vect1, Vector<Integer> vect2 ) throws DifferentSizeException {
         Vector<Integer> vectSum = new Vector(1,1);
-        if (vect1.capacity() == vect2.capacity()) {
+        if (vect1.size() == vect2.size()) {
 
-            for (int i = 0; i < vect1.capacity(); i++) {
+            for (int i = 0; i < vect1.size(); i++) {
 
                 vectSum.add(vect1.get(i) + vect2.get(i));
 
@@ -53,12 +52,12 @@ public class VectorHelper {
      *              le vecteur d'entiers
      */
 
-    static void ReverseVector( Vector<Integer> vect)
+    static void reverseVector( Vector<Integer> vect)
     {
         int tmp = 0;
-        int i=0; int j = vect.capacity() - 1 ;
+        int i=0; int j = vect.size() - 1 ;
 
-        while( i<(vect.capacity()/2) &&  j>=0)
+        while( i<(vect.size()/2) &&  j>=0)
         {
             tmp = vect.get(i);
             vect.setElementAt(vect.get(j),i);
@@ -73,15 +72,14 @@ public class VectorHelper {
      * @param vect
      *              vecteur d'entiers
      */
-    static void SquareVector( Vector<Integer> vect)
+    static void squareVector( Vector<Integer> vect)
     {
-        for ( int i=0; i< vect.capacity(); i++)
+        for ( int i=0; i< vect.size(); i++)
         {
             vect.setElementAt(vect.get(i)*vect.get(i), i);
 
         }
     }
-
 
     /**
      *
