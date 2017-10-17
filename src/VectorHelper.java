@@ -6,7 +6,7 @@ import java.util.Vector;
 
 /**
  * <p>
- *     Cette classe repesente un ensemle des fonctions
+ *     Cette classe repesente un ensemle de fonctions
  *     de manipulation des vecteurs pour generer les informations suivantes :
  *     <ul>
  *         <li> Trie des elements d'un vecteur.</li>
@@ -15,7 +15,7 @@ import java.util.Vector;
  *         <li> L'inverse des elements d'un vecteur donne.</li>
  *         <li> Application d'une formule sur les elements d'un vecteur donne. </li>
  *     </ul>
- * </p>
+ *
  */
 public class VectorHelper {
     /**
@@ -30,7 +30,7 @@ public class VectorHelper {
      * @return vecteur de taille (m) dont les elements sont la somme des deux vecteurs
      * @throws DifferentSizeException Si les deux vecteurs ont des tailles differentes
      */
-    static Vector<Integer> sumTwoVectors (Vector<Integer> vect1, Vector<Integer> vect2 ) throws DifferentSizeException {
+    public Vector<Integer> sumTwoVectors (Vector<Integer> vect1, Vector<Integer> vect2 ) throws DifferentSizeException {
         Vector<Integer> vectSum = new Vector(1,1);
         if (vect1.size() == vect2.size()) {
 
@@ -52,7 +52,7 @@ public class VectorHelper {
      *              le vecteur d'entiers
      */
 
-    static void reverseVector( Vector<Integer> vect)
+    public void reverseVector( Vector<Integer> vect)
     {
         int tmp = 0;
         int i=0; int j = vect.size() - 1 ;
@@ -68,11 +68,11 @@ public class VectorHelper {
     }
 
     /**
-     * Remplace chaque element du vecteur par son carre
      * @param vect
      *              vecteur d'entiers
+     *              Remplace chaque element du vecteur par son carre
      */
-    static void squareVector( Vector<Integer> vect)
+    public void squareVector( Vector<Integer> vect)
     {
         for ( int i=0; i< vect.size(); i++)
         {
