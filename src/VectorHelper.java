@@ -108,13 +108,30 @@ public class VectorHelper {
 
     /**
      *
-     * @param vecteur
+     * @param vecteuri
      *                  le vecteur d'entiers en entrée
      * @return Un autre vecteur trié.
      */
-    public Vector<Integer> trierVect(Vector<Integer> vecteur){
-        Vector<Integer> vecteur2 = (Vector) vecteur.clone();
-        vecteur2.sort(Comparator.naturalOrder());
-        return vecteur2;
+    public Vector<Integer> trierVect(Vector<Integer> vecteuri){
+        Vector<Integer> vecteur = (Vector<Integer>) vecteuri.clone();
+        int n = vecteur.size();
+        int k;
+        for (int m = n; m >= 0; m--) {
+            for (int i = 0; i < n - 1; i++) {
+                k = i + 1;
+                if (vecteur.get(i) > vecteur.get(k)) {
+                    permutNombres(i, k, vecteur);
+                }
+            }
+        }
+        return vecteur;
+    }
+
+    private void permutNombres(int i, int j, Vector<Integer> vecteur) {
+
+        int temp;
+        temp = vecteur.get(i);
+        vecteur.set(i,vecteur.get(j));
+        vecteur.set(j,temp);
     }
 }
